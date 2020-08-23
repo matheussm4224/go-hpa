@@ -1,0 +1,13 @@
+steps:
+
+- id: "Rodando docker"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['create', '--name=go-hpa', 'matheussm4224/go-hpa']
+
+- id: "iniciano container docker"
+  name: 'gcr.io/cloud-builders/docker'
+  args: ['start', 'go-hpa']
+
+- id: "test"
+  name: "gcr.io/cloud-builders/docker"
+  args: ['exec', '-t', 'go-hpa', 'go', 'test']
