@@ -1,13 +1,5 @@
 steps:
 
-- id: "criando imagem docker"
-  name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-y', 'matheussm4224/go-hpa', '.']
-
-- id: "subindo imagem para dockerhub"
-  name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'matheussm4224/go-hpa']
-
 - id: "Rodando docker"
   name: 'gcr.io/cloud-builders/docker'
   args: ['create', '--name=go-hpa', 'matheussm4224/go-hpa']
