@@ -20,7 +20,7 @@ func Load() (string) {
 }
 
 func Message() (string){
-	return "Code.education Rocks!";
+	return "Code.education Rocks";
 }
 
 func handler(writer http.ResponseWriter, request *http.Request) {
